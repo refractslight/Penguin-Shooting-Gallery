@@ -14,7 +14,7 @@ public class gun : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.K)) {
+        if (Input.GetKeyDown(KeyCode.Space)) {
             shoot();
         }
 	}
