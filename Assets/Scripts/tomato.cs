@@ -7,6 +7,7 @@ public class tomato : MonoBehaviour {
     public float lifetime;
     float lerpTime = 5f;
 
+
 	// Use this for initialization
 	void Start () {
 		
@@ -18,7 +19,7 @@ public class tomato : MonoBehaviour {
 	}
 	private void OnCollisionEnter(Collision collision)
 	{
-        splatObject = (GameObject)Instantiate(splatObject, transform.position, transform.rotation);
+        splatObject = (GameObject)Instantiate(splatObject, transform.position, Quaternion.Euler(0, 0, Random.Range(0, 360)));
         Debug.Log("splat");
         Destroy(gameObject);
         Destroy(splatObject, lifetime);
